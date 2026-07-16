@@ -59,6 +59,7 @@ font-size:18px;
 cursor:pointer;
 }
 
+
 .birthday-page{
 
 display:none;
@@ -171,6 +172,16 @@ font-size:16px;
 
 }
 
+
+/* Youtube hidden */
+
+#player{
+width:1px;
+height:1px;
+position:absolute;
+opacity:0;
+}
+
 </style>
 
 </head>
@@ -179,23 +190,9 @@ font-size:16px;
 <body>
 
 
-<!-- MUSIC -->
+<!-- YOUTUBE PLAYER -->
 
-<!-- YOUTUBE MUSIC -->
-
-<div class="music-box">
-
-<iframe 
-width="0" 
-height="0"
-src="https://www.youtube.com/embed/HP2zqQsrsyg?si=qFCwcougzZLAPNsf&start=12"
-title="YouTube video player"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
+<div id="player"></div>
 
 
 
@@ -220,6 +217,7 @@ Open Surprise 💖
 </div>
 
 </div>
+
 
 
 
@@ -281,7 +279,38 @@ aur har din ek nayi khushi laaye." 🌸
 
 
 
+
+<!-- YOUTUBE API -->
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+
 <script>
+
+
+let player;
+
+
+function onYouTubeIframeAPIReady(){
+
+player = new YT.Player('player',{
+
+height:'1',
+width:'1',
+
+videoId:'HP2zqQsrsyg',
+
+playerVars:{
+
+autoplay:0,
+start:12
+
+}
+
+});
+
+}
+
 
 
 function openGift(){
@@ -291,17 +320,13 @@ document.getElementById("start").style.display="none";
 document.getElementById("birthday").style.display="flex";
 
 
-// MUSIC START
+// music start after button click
 
-let music = document.getElementById("music");
+if(player){
 
-music.volume = 1;
+player.playVideo();
 
-music.play().catch(function(error){
-
-console.log("Music blocked:", error);
-
-});
+}
 
 }
 
