@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Seema</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    font-family:'Segoe UI',sans-serif;
+}
+
+.card{
+    width:360px;
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    position:relative;
+}
+
+
+h1{
+    color:#ff4081;
+    margin-bottom:10px;
+}
+
+.name{
+    font-size:35px;
+    font-weight:bold;
+    color:#8e44ad;
+    animation:float 3s infinite ease-in-out;
+}
+
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+
+.date{
+    margin:15px;
+    color:#555;
+    font-size:18px;
+}
+
+
+.quote{
+    margin-top:15px;
+    font-size:17px;
+    color:#444;
+    line-height:1.5;
+}
+
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#ff4081;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+
+.heart{
+    position:absolute;
+    font-size:25px;
+    animation:rise 5s linear infinite;
+}
+
+
+@keyframes rise{
+
+from{
+bottom:-20px;
+opacity:1;
+}
+
+to{
+bottom:100%;
+opacity:0;
+}
+
+}
+
+
+iframe{
+    width:0;
+    height:0;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="card">
+
+<div class="heart" style="left:20%">❤️</div>
+<div class="heart" style="left:70%;animation-delay:2s">💖</div>
+
+
+<h1>🎂 Happy Birthday</h1>
+
+<div class="name">
+Seema Yadav
+</div>
+
+
+<div class="date">
+26 July 2001 ✨
+</div>
+
+
+<div class="quote">
+
+"Zindagi ka har pal khushiyon se bhara ho,
+aapki har dua kabul ho." ❤️
+
+<br><br>
+
+"Muskurahat aapki hamesha bani rahe,
+aur har din ek nayi khushi laaye." 🌸
+
+</div>
+
+
+<button onclick="wish()">
+🎁 Open Surprise
+</button>
+
+
+<!-- Music -->
+<iframe 
+src="https://www.youtube.com/embed/HP2zqQsrsyg?si=-EZyp9Ro0371EEB6"
+allow="autoplay">
+</iframe>
+
+
+</div>
+
+
+
+<script>
+
+function wish(){
+
+alert("❤️ Happy Birthday Seema Yadav ❤️\n\nAap hamesha khush raho aur zindagi me bahut tarakki karo 🎂✨");
+
+}
+
+</script>
+
+
+</body>
+</html>
