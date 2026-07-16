@@ -21,7 +21,6 @@ overflow:hidden;
 font-family:'Segoe UI',sans-serif;
 }
 
-
 .start-page{
 height:100vh;
 display:flex;
@@ -31,7 +30,6 @@ background:linear-gradient(135deg,#ff758c,#ff7eb3);
 text-align:center;
 }
 
-
 .start-box{
 background:white;
 padding:35px;
@@ -39,22 +37,18 @@ border-radius:25px;
 box-shadow:0 15px 35px rgba(0,0,0,.25);
 }
 
-
 .start-box h1{
 color:#ff4081;
 font-size:30px;
 margin-bottom:20px;
 }
 
-
 .start-box p{
 font-size:18px;
 color:#555;
 }
 
-
 .start-btn{
-
 margin-top:25px;
 padding:14px 35px;
 border:none;
@@ -63,9 +57,7 @@ background:#ff4081;
 color:white;
 font-size:18px;
 cursor:pointer;
-
 }
-
 
 .birthday-page{
 
@@ -92,10 +84,8 @@ position:relative;
 
 
 h1{
-
 color:#ff4081;
 margin-bottom:10px;
-
 }
 
 
@@ -126,7 +116,6 @@ transform:translateY(0);
 }
 
 
-
 .date{
 
 margin:15px;
@@ -146,7 +135,6 @@ line-height:1.5;
 }
 
 
-
 .heart{
 
 position:absolute;
@@ -156,25 +144,19 @@ animation:rise 5s linear infinite;
 }
 
 
-
 @keyframes rise{
 
 from{
-
 bottom:-20px;
 opacity:1;
-
 }
 
 to{
-
 bottom:100%;
 opacity:0;
-
 }
 
 }
-
 
 
 .surprise-btn{
@@ -189,7 +171,6 @@ font-size:16px;
 
 }
 
-
 </style>
 
 </head>
@@ -198,10 +179,10 @@ font-size:16px;
 <body>
 
 
-<!-- MUSIC FILE -->
+<!-- MUSIC -->
 
 <audio id="music" loop>
-<source src="birthday.mp3" type="audio/mp3">
+<source src="birthday.mp3" type="audio/mpeg">
 </audio>
 
 
@@ -232,6 +213,7 @@ Open Surprise 💖
 
 <!-- BIRTHDAY PAGE -->
 
+
 <div class="birthday-page" id="birthday">
 
 
@@ -248,7 +230,6 @@ Open Surprise 💖
 </div>
 
 
-
 <h1>
 🎂 Happy Birthday
 </h1>
@@ -259,11 +240,9 @@ Seema Yadav
 </div>
 
 
-
 <div class="date">
 26 July 2001 ✨
 </div>
-
 
 
 <div class="quote">
@@ -279,14 +258,12 @@ aur har din ek nayi khushi laaye." 🌸
 </div>
 
 
-
 <button class="surprise-btn" onclick="wish()">
 🎁 Message
 </button>
 
 
 </div>
-
 
 </div>
 
@@ -304,9 +281,15 @@ document.getElementById("birthday").style.display="flex";
 
 // MUSIC START
 
-let music=document.getElementById("music");
+let music = document.getElementById("music");
 
-music.play();
+music.volume = 1;
+
+music.play().catch(function(error){
+
+console.log("Music blocked:", error);
+
+});
 
 }
 
